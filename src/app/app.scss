@@ -14,3 +14,170 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+/***************************************************/
+/********** VARIABLES: FONTS, COLORS, etc **********/
+/***************************************************/
+/*************************************/
+/********** RESET AND SETUP **********/
+/*************************************/
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+* html .clearfix {
+  zoom: 1; }
+
+/* IE6 */
+.clearfix {
+  clear: both; }
+
+*:first-child + html .clearfix {
+  zoom: 1; }
+
+/* IE7 */
+img {
+  max-width: 100%;
+  height: auto; }
+
+body {
+  background-color: #222;
+  font-family: 'Roboto', sans-serif; }
+
+/*** HEADER AND LOGO ***/
+.bar.bar-stable {
+  background-color: #222;
+  background-image: none;
+  color: #fff; }
+.bar.bar-stable h1.title {
+  color: #fff; }
+.bar.bar-stable h1.title span {
+  font-family: 'Poiret One', sans-serif;
+  font-weight: 300;
+  font-size: 1.1rem; }
+.bar.bar-stable h1.title i {
+  font-size: 0.95rem;
+  margin-right: 5px; }
+
+/**** MAIN CONTENT ****/
+.ion-page {
+  background-color: #222;
+}
+.content-md {
+  background-color: #222;
+}
+.item-md {
+  background-color: #222;
+  color: #fff;
+}
+.item-divider {
+  font-family: 'Roboto', sans-serif;
+  background-color: #D88900;
+}
+.pane .scroll-content .scroll .list {
+  padding: 0px;
+  margin: 0px 0px 0px 0px; }
+.pane .scroll-content .scroll .list .item-divider {
+  font-family: 'Roboto', sans-serif;
+  background-color: #D88900;
+  background-image: none;
+  border: none;
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.2rem;
+  padding: 16px 16px 14px 16px; }
+.pane .scroll-content .scroll .list .item {
+  background-color: rgba(255, 255, 255, 0.1);
+  background-image: none;
+  border-bottom: 1px solid #ccc;
+  color: #fff;
+  padding: 13px 16px; }
+.pane .scroll-content .scroll .list .item.activated {
+  background-color: #222; }
+.pane .scroll-content .scroll .search {
+  background-color: rgba(255, 255, 255, 0.1); }
+
+/**** SINGLE GIG ****/
+.single-gig {
+  color: #fff;
+  text-align: center; }
+.single-gig h1 {
+  color: #fff;
+  font-family: 'Poiret One', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  line-height: 1.2em;
+  margin: 0 auto 0.6em auto;
+  z-index: 2; }
+.single-gig .block {
+  border-bottom: 1px solid #ccc;
+  padding: 1.25em 4%; }
+.single-gig .block:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.1); }
+.single-gig .block a {
+  color: #FFA300;
+  font-weight: 600;
+  text-decoration: none; }
+.single-gig .block a:hover {
+  color: #fff;
+  text-decoration: underline; }
+.single-gig .block.date {
+  font-size: 1.2rem;
+  border-top: 1px solid #ccc; }
+.single-gig .block.place {
+  line-height: 1.85em; }
+.single-gig .block.place strong {
+  font-size: 1.2rem; }
+.single-gig .block.description {
+  text-align: left; }
+.single-gig .block.ticket {
+  margin-top: 2em;
+  border: none;
+  margin-bottom: 2em; }
+.single-gig .block.ticket a {
+  display: inline-block;
+  background-color: #FFA300;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #fff;
+  border-radius: 3px;
+  padding: 20px 15px;
+  text-transform: uppercase; }
+.single-gig .block.ticket a:hover {
+  background-color: #fff;
+  color: #111;
+  text-decoration: none; }
+.single-gig .block.share {
+  border: none;
+  padding-bottom: 2em; }
+
+button.back-button i {
+  font-size: 0.85em; }
+
+.about-description {
+  padding: 0px 25px;
+  font-family: 'Roboto', sans-serif;
+  border: none;
+  color: #fff;
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 40px; }
+.about-description p {
+  margin-bottom: 2em;
+  line-height: 1.4em; }
+.about-description a {
+  color: #FFA300;
+  text-decoration: none; }
+.about-description a:hover {
+  text-decoration: underline; }
+
+.right-buttons {
+  padding: 6px 5px 0px 0px; }
+.right-buttons a {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.25em;
+  text-decoration: none; }
