@@ -13,9 +13,20 @@
     "test:watch": "jest --watch",
     "test:ci": "jest --runInBand",
     "ionic:build": "ionic-app-scripts build",
-    "ionic:serve": "ionic-app-scripts serve"
+    "ionic:serve": "ionic-app-scripts serve",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:ci": "jest --runInBand"
+  },
+  "jest": {
+    "preset": "jest-preset-angular",
+    "setupTestFrameworkScriptFile": "<rootDir>/src/setupJest.ts",
+    "transformIgnorePatterns": [
+      "node_modules/(?!@ngrx|@ionic-native|@ionic)"
+    ]
   },
   "dependencies": {
+    "mosica-core": "file:../mosica-core",
     "@angular/common": "4.1.2",
     "@angular/compiler": "4.1.2",
     "@angular/compiler-cli": "4.1.2",
@@ -38,10 +49,10 @@
   "devDependencies": {
     "@ionic/app-scripts": "1.3.7",
     "@ionic/cli-plugin-ionic-angular": "1.2.0",
-    "@types/jest": "19.2.3",
+    "@types/jest": "^19.2.3",
     "codecov": "2.2.0",
-    "jest": "20.0.4",
-    "jest-preset-angular": "2.0.2",
+    "jest": "^20.0.4",
+    "jest-preset-angular": "^2.0.2",
     "typescript": "2.3.3"
   },
   "jest": {

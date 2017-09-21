@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="icon"></ion-icon>
+    </button>
+    <ion-title>Listaca de conciertos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar
+    showCancelButton="false"
+    (ionInput)="onSearch($event)">
+  </ion-searchbar>
+  <ion-list>
+    <div *ngFor="let day of currentDays">
+      <ion-item-divider >
+        {{day.day}}
+      </ion-item-divider>
+      <button ion-item *ngFor="let gig of day.gigs" (click)="open($event, gig)">
+        {{gig.title}} - {{gig.place}}
+      </button>
+    </div>
+  </ion-list>
+</ion-content>
