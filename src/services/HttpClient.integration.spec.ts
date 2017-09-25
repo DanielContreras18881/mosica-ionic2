@@ -1,20 +1,22 @@
 import {TestBed, async} from '@angular/core/testing';
 import {HttpClient} from './HttpClient';
-import {ConnectionBackend, HttpModule, Jsonp, JsonpModule} from '@angular/http';
+import {JsonpModule} from '@angular/http';
+
+const GIGS_URL = 'http://www.mosica.es/api/1/gigs';
 
 describe('HttpClient', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [HttpModule, JsonpModule],
+      imports: [JsonpModule],
       providers: [HttpClient]
     });
   }));
 
-  it('returns a list of items', async() => {
+  it('returns a list of gigs', async() => {
     const httpClient = TestBed.get(HttpClient);
 
-    const gigs = await httpClient.get('http://www.mosica.es/api/1/gigs');
+    const gigs = await httpClient.get(GIGS_URL);
 
     expect(gigs.length).toBeGreaterThan(0);
     expect(gigs[0].day).toBeDefined();
