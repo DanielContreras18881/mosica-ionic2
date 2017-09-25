@@ -10,7 +10,7 @@ export class HttpClient {
   get(url) {
     return this.jsonp.request(url +'?callback=JSONP_CALLBACK')
       .map(result => {
-        return { body: result.json() };
+        return result.json().response;
       })
       .toPromise();
   }
