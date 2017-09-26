@@ -9,13 +9,14 @@ import { MyApp } from './app.component';
 
 import { AboutPage } from '../pages/about/about';
 import { GigPage } from '../pages/gig/gig';
-import { HomePage } from '../pages/home/home';
+import { GeolocationPage } from '../pages/geolocation/geolocation';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ListPage } from '../pages/list/list';
 import * as mosicaCore from 'mosica-core';
 import {HttpClient} from '../services/HttpClient';
 import {HttpModule, JsonpModule} from '@angular/http';
 import {MapService} from '../services/MapService';
+import {GeolocationService} from '../services/GeolocationService';
 
 let gigServiceFactory = (httpClient: HttpClient) => {
   return new mosicaCore.GigService(httpClient, new mosicaCore.Matcher);
@@ -26,7 +27,7 @@ let gigServiceFactory = (httpClient: HttpClient) => {
     MyApp,
     AboutPage,
     GigPage,
-    HomePage,
+    GeolocationPage,
     TabsPage,
     ListPage
   ],
@@ -42,7 +43,7 @@ let gigServiceFactory = (httpClient: HttpClient) => {
     MyApp,
     AboutPage,
     GigPage,
-    HomePage,
+    GeolocationPage,
     TabsPage,
     ListPage
   ],
@@ -51,6 +52,7 @@ let gigServiceFactory = (httpClient: HttpClient) => {
     SplashScreen,
     HttpClient,
     MapService,
+    GeolocationService,
     {provide: mosicaCore.GigService,
       useFactory: gigServiceFactory,
       deps: [HttpClient]

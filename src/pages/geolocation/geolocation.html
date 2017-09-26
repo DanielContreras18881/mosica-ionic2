@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Geolocation</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>This is your geolocation info:</h2>
+  <ion-item *ngIf="geolocation">
+    Latitude: {{ geolocation.latitude }}
+  </ion-item>
+  <ion-item *ngIf="geolocation">
+    Longitud: {{ geolocation.longitude }}
+  </ion-item>
+</ion-content>
