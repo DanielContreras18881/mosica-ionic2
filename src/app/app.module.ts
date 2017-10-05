@@ -17,6 +17,7 @@ import {HttpClient} from '../services/HttpClient';
 import {HttpModule, JsonpModule} from '@angular/http';
 import {MapService} from '../services/MapService';
 import {GeolocationService} from '../services/GeolocationService';
+import {MosicaRouter} from '../services/MosicaRouter';
 
 let gigServiceFactory = (httpClient: HttpClient) => {
   return new mosicaCore.GigService(httpClient, new mosicaCore.Matcher);
@@ -53,6 +54,7 @@ let gigServiceFactory = (httpClient: HttpClient) => {
     HttpClient,
     MapService,
     GeolocationService,
+    MosicaRouter,
     {provide: mosicaCore.GigService,
       useFactory: gigServiceFactory,
       deps: [HttpClient]

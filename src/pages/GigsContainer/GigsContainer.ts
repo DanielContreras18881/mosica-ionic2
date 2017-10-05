@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
 import * as core from 'mosica-core';
-import {GigPage} from '../GigsDetail/GigDetail';
+import {MosicaRouter} from '../../services/MosicaRouter';
 
 @Component({
   selector: 'page-list',
@@ -10,7 +9,7 @@ import {GigPage} from '../GigsDetail/GigDetail';
 export class GigsContainer {
   currentDays: any;
 
-  constructor(public navCtrl: NavController,
+  constructor(public mosicaRouter: MosicaRouter,
               public gigService: core.GigService) {
 
     gigService.retrieveNextGigs().then((gigsByDay) => {
@@ -19,9 +18,7 @@ export class GigsContainer {
   }
 
   open(event, gig) {
-    this.navCtrl.push(GigPage, {
-      gig: gig
-    });
+    this.mosicaRouter.navigateToGig(gig);
   }
 
   async onSearch(event) {

@@ -5,6 +5,7 @@ import {NO_ERRORS_SCHEMA} from '@angular/core';
 import * as core from 'mosica-core';
 import {fakeGigsByDay} from './fake-gigs-by-day';
 import {GigsContainerPage} from '../__page_objects__/GigContainerPage';
+import {MosicaRouter} from '../../../services/MosicaRouter';
 
 describe('Gigs Container', () => {
 
@@ -17,7 +18,7 @@ describe('Gigs Container', () => {
         GigsContainer
       ],
       providers: [
-        {provide: NavController, useValue: {}},
+        {provide: MosicaRouter, useValue: {}},
         {provide: core.GigService, useClass: core.GigService},
       ]
     }).compileComponents();

@@ -14,3 +14,7 @@ export class GigsContainerPage {
     expect(this.text()).toContain(atext)
   }
 }
+
+export function flushPromises() {
+  return new Promise(resolve => setImmediate(resolve))
+}
