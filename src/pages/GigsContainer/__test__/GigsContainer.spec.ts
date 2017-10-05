@@ -8,9 +8,6 @@ import {GigsContainerPage} from '../__page_objects__/GigContainerPage';
 
 describe('Gigs Container', () => {
 
-  const navControllerStub = {};
-  const gigServiceStub = { retrieveNextGigs: () => Promise.resolve(fakeGigsByDay)};
-
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       schemas: [
@@ -20,13 +17,13 @@ describe('Gigs Container', () => {
         GigsContainer
       ],
       providers: [
-        {provide: NavController, useValue: navControllerStub},
-        {provide: core.GigService, useValue: gigServiceStub},
+        {provide: NavController, useValue: {}},
+        {provide: core.GigService, useClass: core.GigService},
       ]
     }).compileComponents();
   }));
 
-  it('shows all gig texts', async() => {
+  it('shows all gigs in first day', async() => {
     const FIRST_DAY_GIG_TEXTS = fakeGigsByDay[0].gigs.map(
       gig => gig.title + ' - ' + gig.place)
     const fixture = TestBed.createComponent(GigsContainer);
