@@ -1,4 +1,4 @@
-import {GeolocationService} from './GeolocationService';
+import {GeolocationService} from '../GeolocationService';
 
 describe('GecolocationService', () => {
 

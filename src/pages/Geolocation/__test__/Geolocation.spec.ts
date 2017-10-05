@@ -1,8 +1,8 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {NO_ERRORS_SCHEMA} from '@angular/core';
 
-import {GeolocationPage} from './geolocation';
-import {GeolocationService} from '../../services/GeolocationService';
+import {GeolocationPage} from '../Geolocation';
+import {GeolocationService} from '../../../services/GeolocationService';
 
 describe('GeolocationPage', () => {
 

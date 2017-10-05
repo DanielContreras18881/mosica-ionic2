@@ -13,6 +13,6 @@ export class GeolocationPage implements OnInit {
 
   async ngOnInit() {
     this.geolocation = await this.geolocationService.currentPosition();
-    console.log('Fetching geolocation', this.geolocation);
+    // console.log('Fetching geolocation', this.geolocation);
   }
 }

@@ -4,7 +4,7 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { MyApp } from './app.component';
+import { MyApp } from '../app.component';
 
 describe('MyApp', () => {
 

@@ -2,8 +2,8 @@ import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import {NavController, NavParams} from 'ionic-angular';
 
-import { GigPage } from './gig';
-import {MapService} from '../../services/MapService';
+import { GigPage } from '../GigDetail';
+import {MapService} from '../../../services/MapService';
 
 describe('GigPage', () => {
 
@@ -48,10 +48,8 @@ describe('GigPage', () => {
 
   it('opens a map', () => {
     const a = fixture.debugElement.nativeElement.querySelector('a');
-    console.log('Before click');
     a.click();
     fixture.detectChanges();
-    console.log('After click');
   });
 
 });

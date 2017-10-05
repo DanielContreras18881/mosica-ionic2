@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import * as core from 'mosica-core';
-import {GigPage} from '../gig/gig';
+import {GigPage} from '../GigsDetail/GigDetail';
 
 @Component({
   selector: 'page-list',
-  templateUrl: 'list.html'
+  templateUrl: 'gigs-container.html'
 })
-export class ListPage {
+export class GigsContainer {
   currentDays: any;
 
   constructor(public navCtrl: NavController,

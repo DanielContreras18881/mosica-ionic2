@@ -4,7 +4,7 @@ import {MapService} from '../../services/MapService';
 
 @Component({
   selector: 'page-gig',
-  templateUrl: 'gig.html'
+  templateUrl: 'gig-detail.html'
 })
 export class GigPage {
   gig: any;

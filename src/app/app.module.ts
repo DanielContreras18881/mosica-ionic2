@@ -8,10 +8,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { MyApp } from './app.component';
 
 import { AboutPage } from '../pages/about/about';
-import { GigPage } from '../pages/gig/gig';
-import { GeolocationPage } from '../pages/geolocation/geolocation';
+import { GigPage } from '../pages/GigsDetail/GigDetail';
+import { GeolocationPage } from '../pages/Geolocation/Geolocation';
 import { TabsPage } from '../pages/tabs/tabs';
-import { ListPage } from '../pages/list/list';
+import { GigsContainer } from '../pages/GigsContainer/GigsContainer';
 import * as mosicaCore from 'mosica-core';
 import {HttpClient} from '../services/HttpClient';
 import {HttpModule, JsonpModule} from '@angular/http';
@@ -29,7 +29,7 @@ let gigServiceFactory = (httpClient: HttpClient) => {
     GigPage,
     GeolocationPage,
     TabsPage,
-    ListPage
+    GigsContainer
   ],
   imports: [
     BrowserModule,
@@ -45,7 +45,7 @@ let gigServiceFactory = (httpClient: HttpClient) => {
     GigPage,
     GeolocationPage,
     TabsPage,
-    ListPage
+    GigsContainer
   ],
   providers: [
     StatusBar,

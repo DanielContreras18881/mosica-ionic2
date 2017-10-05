@@ -1,5 +1,5 @@
 import {TestBed, async} from '@angular/core/testing';
-import {HttpClient} from './HttpClient';
+import {HttpClient} from '../HttpClient';
 import {JsonpModule} from '@angular/http';
 
 const GIGS_URL = 'http://www.mosica.es/api/1/gigs';
