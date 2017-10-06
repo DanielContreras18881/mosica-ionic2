@@ -4,9 +4,9 @@ import {MosicaRouter} from '../../services/MosicaRouter';
 
 @Component({
   selector: 'page-list',
-  templateUrl: 'gigs-container.html'
+  templateUrl: 'days.html'
 })
-export class GigsContainer {
+export class Days {
   currentDays: any
   isLoading: Boolean = true
   constructor(public mosicaRouter: MosicaRouter,

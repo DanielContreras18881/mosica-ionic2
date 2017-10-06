@@ -1,12 +1,12 @@
 import {TestBed, async} from '@angular/core/testing';
-import {GigsContainer} from '../GigsContainer';
+import {Days} from '../Days';
 import {NO_ERRORS_SCHEMA} from '@angular/core';
 import * as core from 'mosica-core';
 import {fakeGigsByDay} from './fake-gigs-by-day';
-import {GigsContainerPage} from '../__page_objects__/GigContainerPage';
+import {DaysPage} from '../__page_objects__/DaysPage';
 import {MosicaRouter} from '../../../services/MosicaRouter';
 
-describe('Gigs Container', () => {
+describe('Days', () => {
 
   let fixture, page;
   const navigateToGigSpy = jest.fn()
@@ -16,7 +16,7 @@ describe('Gigs Container', () => {
         NO_ERRORS_SCHEMA
       ],
       declarations: [
-        GigsContainer
+        Days
       ],
       providers: [
         {provide: MosicaRouter, useValue: { navigateToGig: navigateToGigSpy} },
@@ -24,8 +24,8 @@ describe('Gigs Container', () => {
       ]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(GigsContainer);
-    page = new GigsContainerPage(fixture)
+    fixture = TestBed.createComponent(Days);
+    page = new DaysPage(fixture)
   }));
 
 
@@ -43,12 +43,13 @@ describe('Gigs Container', () => {
     )
   });
 
-  fit('navigates to first gig detail', async () => {
+  it('navigates to first gig detail', async () => {
     const FIRST_GIG = fakeGigsByDay[0].gigs[0]
     await page.updateAsync()
     page.clickFirstGig();
     expect(navigateToGigSpy).toHaveBeenCalledWith(FIRST_GIG);
   });
+
   //
   // it('navigates to second gig detail', async () => {
   //   const SECOND_GIG_ID = '2222222'

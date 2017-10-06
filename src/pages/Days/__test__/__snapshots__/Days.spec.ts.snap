@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Gigs Container matches full snapshot 1`] = `
+exports[`Days matches full snapshot 1`] = `
 "<ion-header>
   <ion-navbar>
     <button ion-button=\\"\\" menutoggle=\\"\\">
@@ -19,9 +19,9 @@ exports[`Gigs Container matches full snapshot 1`] = `
       <ion-item-divider>
         Lunes, 18 de Septiembre
       </ion-item-divider>
-      <button ion-item=\\"\\">
+      <button class=\\"gig\\" ion-item=\\"\\">
         Anarchy in the JS - SCBCN
-      </button><button ion-item=\\"\\">
+      </button><button class=\\"gig\\" ion-item=\\"\\">
         Vegan Microservices - Around the world
       </button>
     </div>

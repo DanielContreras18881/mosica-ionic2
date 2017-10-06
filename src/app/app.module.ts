@@ -11,7 +11,7 @@ import { AboutPage } from '../pages/about/about';
 import { GigPage } from '../pages/GigsDetail/GigDetail';
 import { GeolocationPage } from '../pages/Geolocation/Geolocation';
 import { TabsPage } from '../pages/tabs/tabs';
-import { GigsContainer } from '../pages/GigsContainer/GigsContainer';
+import { Days } from '../pages/Days/Days';
 import * as mosicaCore from 'mosica-core';
 import {HttpClient} from '../services/HttpClient';
 import {HttpModule, JsonpModule} from '@angular/http';
@@ -31,7 +31,7 @@ let gigServiceFactory = (httpClient: HttpClient) => {
     GigPage,
     GeolocationPage,
     TabsPage,
-    GigsContainer,
+    Days,
     LoadSpinner
   ],
   imports: [
@@ -48,7 +48,7 @@ let gigServiceFactory = (httpClient: HttpClient) => {
     GigPage,
     GeolocationPage,
     TabsPage,
-    GigsContainer
+    Days
   ],
   providers: [
     StatusBar,
