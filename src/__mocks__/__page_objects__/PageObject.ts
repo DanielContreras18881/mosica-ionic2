@@ -6,7 +6,7 @@ export class PageObject {
     this.fixture.detectChanges()
   }
 
-  keepsSnapshot() {
+  matchSnapshot() {
     expect(this.text()).toMatchSnapshot()
   }
 

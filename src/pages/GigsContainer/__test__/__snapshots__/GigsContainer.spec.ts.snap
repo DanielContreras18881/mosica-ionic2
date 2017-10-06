@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Gigs Container snapshot 1`] = `
+exports[`Gigs Container matches full snapshot 1`] = `
 "<ion-header>
   <ion-navbar>
     <button ion-button=\\"\\" menutoggle=\\"\\">

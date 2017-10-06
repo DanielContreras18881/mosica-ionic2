@@ -18,7 +18,7 @@
       <ion-item-divider >
         {{day.day}}
       </ion-item-divider>
-      <button ion-item *ngFor="let gig of day.gigs" (click)="open($event, gig)">
+      <button class="gig" ion-item *ngFor="let gig of day.gigs" (click)="open($event, gig)">
         {{gig.title}} - {{gig.place}}
       </button>
     </div>

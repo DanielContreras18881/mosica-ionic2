@@ -1,25 +1,15 @@
 import {PageObject} from '../../../__mocks__/__page_objects__/PageObject';
+import {By} from '@angular/platform-browser';
 
 export class GigsContainerPage extends PageObject{
   constructor(public fixture) {
     super(fixture)
   }
 
-  async updateAsync() {
-    await flushPromises();
+  clickFirstGig() {
+    const button = this.fixture.nativeElement.querySelector('.gig');
+    button.click();
     this.fixture.detectChanges()
-  }
-
-  keepsSnapshot() {
-    expect(this.text()).toMatchSnapshot()
-  }
-
-  remove_line_breaks(string) {
-    return string.replace(/(?:\r\n|\r|\n)/g, '<br />');
-  }
-
-  containsText(atext) {
-    expect(this.text()).toContain(atext)
   }
 }
 

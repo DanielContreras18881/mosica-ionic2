@@ -21,14 +21,14 @@ describe('LoadSpinner', () => {
     let fixture = TestBed.createComponent(LoadSpinner);
     const page = new PageObject(fixture)
     page.changeInput('isLoading', true)
-    page.keepsSnapshot()
+    page.matchSnapshot()
   });
 
   it('snapshot when is NOT loading', async() => {
     let fixture = TestBed.createComponent(LoadSpinner);
     const page = new PageObject(fixture)
     page.changeInput('isLoading', false)
-    page.keepsSnapshot()
+    page.matchSnapshot()
   });
 });
 
