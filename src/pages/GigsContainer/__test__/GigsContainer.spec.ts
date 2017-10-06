@@ -1,6 +1,5 @@
 import {TestBed, async} from '@angular/core/testing';
 import {GigsContainer} from '../GigsContainer';
-import {NavController} from 'ionic-angular';
 import {NO_ERRORS_SCHEMA} from '@angular/core';
 import * as core from 'mosica-core';
 import {fakeGigsByDay} from './fake-gigs-by-day';
@@ -33,5 +32,13 @@ describe('Gigs Container', () => {
     FIRST_DAY_GIG_TEXTS.map((text) =>
       page.containsText(text)
     )
+  });
+
+  it('snapshot', async() => {
+    const fixture = TestBed.createComponent(GigsContainer);
+    const page = new GigsContainerPage(fixture)
+    await page.updateAsync()
+    page.keepsSnapshot()
+
   });
 });

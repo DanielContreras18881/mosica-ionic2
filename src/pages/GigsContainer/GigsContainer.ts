@@ -7,13 +7,15 @@ import {MosicaRouter} from '../../services/MosicaRouter';
   templateUrl: 'gigs-container.html'
 })
 export class GigsContainer {
-  currentDays: any;
-
+  currentDays: any
+  isLoading: Boolean = true
   constructor(public mosicaRouter: MosicaRouter,
               public gigService: core.GigService) {
 
+
     gigService.retrieveNextGigs().then((gigsByDay) => {
-      this.currentDays = gigsByDay;
+      this.currentDays = gigsByDay
+      this.isLoading = false
     });
   }
 

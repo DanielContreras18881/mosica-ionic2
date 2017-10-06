@@ -12,6 +12,7 @@
     showCancelButton="false"
     (ionInput)="onSearch($event)">
   </ion-searchbar>
+  <LoadSpinner [isLoading]="isLoading"></LoadSpinner>
   <ion-list>
     <div *ngFor="let day of currentDays">
       <ion-item-divider >

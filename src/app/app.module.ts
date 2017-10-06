@@ -18,6 +18,7 @@ import {HttpModule, JsonpModule} from '@angular/http';
 import {MapService} from '../services/MapService';
 import {GeolocationService} from '../services/GeolocationService';
 import {MosicaRouter} from '../services/MosicaRouter';
+import {LoadSpinner} from '../shared/LoadSpinner';
 
 let gigServiceFactory = (httpClient: HttpClient) => {
   return new mosicaCore.GigService(httpClient, new mosicaCore.Matcher);
@@ -30,7 +31,8 @@ let gigServiceFactory = (httpClient: HttpClient) => {
     GigPage,
     GeolocationPage,
     TabsPage,
-    GigsContainer
+    GigsContainer,
+    LoadSpinner
   ],
   imports: [
     BrowserModule,
