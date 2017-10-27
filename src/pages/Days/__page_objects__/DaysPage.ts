@@ -1,5 +1,4 @@
 import {PageObject} from '../../../__mocks__/__page_objects__/PageObject';
-import {By} from '@angular/platform-browser';
 
 export class DaysPage extends PageObject{
   constructor(public fixture) {
