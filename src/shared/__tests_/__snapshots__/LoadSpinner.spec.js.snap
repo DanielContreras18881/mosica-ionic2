@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`LoadSpinner snapshot when is NOT loading 1`] = `""`;
-
-exports[`LoadSpinner snapshot when isLoading 1`] = `
-"<div class=\\"spinner\\">
-  <p>Loading...</p>
-</div>"
-`;

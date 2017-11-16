@@ -5,21 +5,20 @@ import { Wrap } from '../../test/helpers'
 
 describe('LoadSpinner', () => {
 
+  let fixture, page
   beforeEach(async(() => {
     Wrap(LoadSpinner).mount()
+    fixture = TestBed.createComponent(LoadSpinner)
+    page = new PageObject(fixture)
   }))
 
   it('when isLoading', async() => {
-    let fixture = TestBed.createComponent(LoadSpinner);
-    const page = new PageObject(fixture)
     page.changeInput('isLoading', true)
     page.containsText('Loading...')
     //page.matchSnapshot()
   });
 
   it('when is NOT loading', async() => {
-    let fixture = TestBed.createComponent(LoadSpinner);
-    const page = new PageObject(fixture)
     page.changeInput('isLoading', false)
     page.notContainsText('Loading...')
     //page.matchSnapshot()
