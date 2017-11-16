@@ -1,7 +1,7 @@
 export class PageObject {
   constructor(public fixture) {}
 
-  async updateAsync() {
+  async wait() {
     await flushPromises();
     this.fixture.detectChanges()
   }

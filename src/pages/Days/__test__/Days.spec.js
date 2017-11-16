@@ -25,12 +25,12 @@ describe('Days', async () => {
   }))
 
   fit('matches full snapshot', async() => {
-    await page.updateAsync()
+    await page.wait()
     page.matchSnapshot()
   })
 
   it('shows all gigs in first day', async() => {
-    await page.updateAsync()
+    await page.wait()
     FIRST_DAY_GIG_TEXTS.map((text) =>
       page.containsText(text)
     )
@@ -38,7 +38,7 @@ describe('Days', async () => {
 
   it('navigates to first gig detail', async () => {
     const FIRST_GIG = fakeGigsByDay[0].gigs[0]
-    await page.updateAsync()
+    await page.wait()
     page.clickFirstGig()
     expect(navigateToGigSpy).toHaveBeenCalledWith(FIRST_GIG)
   })

@@ -15,12 +15,10 @@ describe('LoadSpinner', () => {
   it('when isLoading', async() => {
     page.changeInput('isLoading', true)
     page.containsText('Loading...')
-    //page.matchSnapshot()
   });
 
   it('when is NOT loading', async() => {
     page.changeInput('isLoading', false)
     page.notContainsText('Loading...')
-    //page.matchSnapshot()
   });
 });
