@@ -26,6 +26,10 @@ export class PageObject {
   containsText(text) {
     expect(this.text()).toContain(text)
   }
+
+  notContainsText(text) {
+    expect(this.text()).not.toContain(text)
+  }
 }
 
 export function flushPromises() {

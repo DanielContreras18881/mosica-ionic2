@@ -1,34 +1,27 @@
-import {TestBed, async} from '@angular/core/testing';
-import {NO_ERRORS_SCHEMA} from '@angular/core';
-import { PageObject } from '../../__mocks__/__page_objects__/PageObject';
-import { LoadSpinner } from '../LoadSpinner';
+import {TestBed, async} from '@angular/core/testing'
+import { PageObject } from '../../__mocks__/__page_objects__/PageObject'
+import { LoadSpinner } from '../LoadSpinner'
+import { Wrap } from '../../test/helpers'
 
 describe('LoadSpinner', () => {
 
   beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      schemas: [
-        NO_ERRORS_SCHEMA
-      ],
-      declarations: [
-        LoadSpinner
-      ]
-    }).compileComponents();
-  }));
+    Wrap(LoadSpinner).mount()
+  }))
 
-
-  it('snapshot when isLoading', async() => {
+  it('when isLoading', async() => {
     let fixture = TestBed.createComponent(LoadSpinner);
     const page = new PageObject(fixture)
     page.changeInput('isLoading', true)
-    page.matchSnapshot()
+    page.containsText('Loading...')
+    //page.matchSnapshot()
   });
 
-  it('snapshot when is NOT loading', async() => {
+  it('when is NOT loading', async() => {
     let fixture = TestBed.createComponent(LoadSpinner);
     const page = new PageObject(fixture)
     page.changeInput('isLoading', false)
-    page.matchSnapshot()
+    page.notContainsText('Loading...')
+    //page.matchSnapshot()
   });
 });
-
