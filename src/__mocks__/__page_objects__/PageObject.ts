@@ -2,12 +2,8 @@ export class PageObject {
   constructor(public fixture) {}
 
   async wait() {
-    await flushPromises();
+    await flushPromises()
     this.fixture.detectChanges()
-  }
-
-  matchSnapshot() {
-    expect(this.text()).toMatchSnapshot()
   }
 
   text() {
@@ -29,6 +25,10 @@ export class PageObject {
 
   notContainsText(text) {
     expect(this.text()).not.toContain(text)
+  }
+
+  matchSnapshot() {
+    expect(this.text()).toMatchSnapshot()
   }
 }
 

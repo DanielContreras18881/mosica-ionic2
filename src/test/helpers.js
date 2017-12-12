@@ -1,5 +1,6 @@
 import { TestBed } from '@angular/core/testing'
 import {NO_ERRORS_SCHEMA} from '@angular/core'
+import { LoadSpinner } from '../shared/LoadSpinner'
 
 export function resolvedPromise(promiseResult) {
   return jest.fn(() => Promise.resolve(promiseResult))
@@ -21,8 +22,8 @@ export function Wrap(component) {
     return this
   }
 
-  function mount() {
-    return TestBed.configureTestingModule({
+  async function mount() {
+    await  TestBed.configureTestingModule({
       declarations: [
         component
       ],
@@ -31,5 +32,6 @@ export function Wrap(component) {
         NO_ERRORS_SCHEMA
       ],
     }).compileComponents()
+    return TestBed.createComponent(component)
   }
 }

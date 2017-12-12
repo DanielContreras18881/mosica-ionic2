@@ -1,4 +1,4 @@
-import {async, TestBed} from '@angular/core/testing'
+import {async} from '@angular/core/testing'
 import {Days} from '../Days'
 import * as core from 'mosica-core'
 import {fakeGigsByDay, FIRST_DAY_GIG_TEXTS} from './fake-gigs-by-day'
@@ -8,26 +8,20 @@ import {Wrap} from '../../../test/helpers'
 
 describe('Days', async () => {
 
-  let fixture, page
+  let page
   const navigateToGigSpy = jest.fn()
   beforeEach(async(async() => {
 
-  const providers = [
+    const providers = [
         {provide: MosicaRouter, useValue: { navigateToGig: navigateToGigSpy} },
         {provide: core.GigService, useClass: core.GigService},
       ]
 
-    Wrap(Days).withProviders(providers)
+    const wrapper = await Wrap(Days).withProviders(providers)
       .mount()
 
-    fixture = TestBed.createComponent(Days)
-    page = new DaysPage(fixture)
+    page = new DaysPage(wrapper)
   }))
-
-  fit('matches full snapshot', async() => {
-    await page.wait()
-    page.matchSnapshot()
-  })
 
   it('shows all gigs in first day', async() => {
     await page.wait()
@@ -41,6 +35,11 @@ describe('Days', async () => {
     await page.wait()
     page.clickFirstGig()
     expect(navigateToGigSpy).toHaveBeenCalledWith(FIRST_GIG)
+  })
+
+  fit('matches full snapshot', async() => {
+    await page.wait()
+    page.matchSnapshot()
   })
 
   //

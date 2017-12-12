@@ -1,3 +1,4 @@
+// LoadSpinner.ts
 import {Component, Input} from '@angular/core';
 
 @Component({
@@ -7,3 +8,5 @@ import {Component, Input} from '@angular/core';
 export class LoadSpinner {
   @Input() isLoading
 }
+
+
